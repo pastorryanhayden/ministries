@@ -31,10 +31,9 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'Sitesforchurch\Ministries\Components\MyComponent' => 'myComponent',
+            'Sitesforchurch\Ministries\Components\Ministry' => 'Ministry',
+            'Sitesforchurch\Ministries\Components\Ministries' => 'Ministries',
         ];
     }
 
@@ -69,6 +68,13 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-users',
                 'permissions' => ['sitesforchurch.ministries.ministries'],
                 'order'       => 502,
+                'sideMenu' => [
+                    'typeofworks' => [
+                        'label'       => 'Ministries',
+                        'icon'        => 'icon-users',
+                        'url'         => Backend::url('sitesforchurch/ministries/ministries'),
+                    ]
+                ]
             ],
         ];
     }

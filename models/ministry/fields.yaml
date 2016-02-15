@@ -12,8 +12,9 @@ fields:
         label: Slug
         required: true
         placeholder: no special spaces, should auto-populate.
-        preset: slug
-        field: name
+        preset:
+            field: name
+            type: slug
         span: right
     group:
         label: Who is this ministry for?

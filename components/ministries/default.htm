@@ -1,0 +1,12 @@
+<p>This is the default markup for component Ministries</p>
+{% for ministry in ministries %}
+<div class="panel panel-default">
+  <div class="panel-heading"><a href="{{ ministryPage|page({ slug: ministry.slug }) }}" >{{ ministry.name }}</a></div>
+  <div class="panel-body">
+    {{ ministry.shortDescription }}
+  </div>
+</div>
+    
+{% endfor %}
+
+{{ ministries.render|raw }}
