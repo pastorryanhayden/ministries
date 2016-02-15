@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Ministry
+
+# Model Form Field configuration
+form: $/sitesforchurch/ministries/models/ministry/fields.yaml
+
+# Model Class name
+modelClass: Sitesforchurch\Ministries\Models\Ministry
+
+# Default redirect location
+defaultRedirect: sitesforchurch/ministries/ministries
+
+# Create page
+create:
+    title: Create Ministry
+    redirect: sitesforchurch/ministries/ministries/update/:id
+    redirectClose: sitesforchurch/ministries/ministries
+
+# Update page
+update:
+    title: Edit Ministry
+    redirect: sitesforchurch/ministries/ministries
+    redirectClose: sitesforchurch/ministries/ministries
+
+# Preview page
+preview:
+    title: Preview Ministry

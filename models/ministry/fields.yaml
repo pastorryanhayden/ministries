@@ -1,0 +1,78 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Ministry Name
+        required: true
+        placeholder: Youth Ministry
+        span: left
+    slug:
+        label: Slug
+        required: true
+        placeholder: no special spaces, should auto-populate.
+        preset: slug
+        field: name
+        span: right
+    group:
+        label: Who is this ministry for?
+        required: true
+        placeholder: High School Students
+    shortDescription:
+        label: Give a short description for this ministry:
+        type: textarea
+        size: small
+        required: true
+        placeholder:  Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. 
+        span: left
+    ministryLogo:
+        label: Upload the ministry logo (optional)
+        type: mediafinder
+        mode: image
+        span: right
+        stretch: true
+
+tabs:
+    fields:
+        meetingTime:
+            label: When does this ministry meet? 
+            required: true
+            tab: Details
+            placeholder: Wednesdays during the Prayer Meeting
+        meetingPlace:
+            label: Where does this ministry meet? 
+            tab: Details
+            placeholder: The church fellowship hall.
+        longDescription:
+            label: What else do you want to say about the ministry?
+            type: richeditor
+            size: giant
+            tab: Details
+        leaderName:
+            label: Who leads this ministry?
+            tab: Leader
+            placeholder: John Doe
+        leaderDescription:
+            label: Give the ministry leader a short description:
+            tab: Leader
+            type: textarea
+            size: small
+            placeholder: John Doe is a deacon at generic Baptist church. He's been a member here since 1990. He's a gifted teacher who enjoys watching football.
+        leaderPicture:
+            label: Upload a square portrait of the leader:
+            tab: Leader
+            type: fileupload
+            mode: image
+            imageWidth: 250
+            imageHeight: 250
+        leaderPhone:
+            label: What's the ministry leader's phone number?
+            tab: Leader
+            placeholder: (123) 456-7890
+        leaderEmail:
+            label: What's the ministry leader's email address?
+            tab: Leader
+            placeholder: someguy@somedomain.com
+
+

@@ -1,0 +1,4 @@
+1.0.1: First version of ministries
+1.0.2:
+      - Created the ministry model
+      - create_ministries_table.php
