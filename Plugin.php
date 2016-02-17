@@ -2,13 +2,15 @@
 
 use Backend;
 use System\Classes\PluginBase;
+use Radiantweb\Proevents\Models\Calendar;
+use Sitesforchurch\Ministries\Models\Ministry;
 
 /**
  * ministries Plugin Information File
  */
 class Plugin extends PluginBase
 {
-
+    public $require = ['Radiantweb.Proevents'];
     /**
      * Returns information about this plugin.
      *
@@ -79,4 +81,9 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function boot() {
+        Calendar::extend(function($model) {
+            $model->belongsTo['ministry'] = ['Sitesforchurch\Ministries\Models\Ministry'];
+        });
+    }
 }
