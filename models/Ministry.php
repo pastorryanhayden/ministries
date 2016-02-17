@@ -1,13 +1,14 @@
 <?php namespace Sitesforchurch\Ministries\Models;
 
 use Model;
+use Radiantweb\Proevents\Models\Calendar;
+
 
 /**
  * ministry Model
  */
 class Ministry extends Model
 {
-
     /**
      * @var string The database table used by the model.
      */
@@ -26,16 +27,25 @@ class Ministry extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [];
+    public $hasOne = [
+
+    ];
     public $hasMany = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'calendar' => 'Radiantweb\Proevents\Models\Calendar'
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [
-    'leaderPicture' => 'System\Models\File'
+        'leaderPicture' => 'System\Models\File'
     ];
     public $attachMany = [];
+
+    public function calendar()
+    {
+        return $this->hasOne('Radiantweb\Proevents\Models\Calendar');
+    }
 
 }
